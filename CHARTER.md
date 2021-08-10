@@ -12,4 +12,4 @@ The Graphics Special Interest Group (SIG) is concerned with aligning the RISC-V 
 
 * providing direction for extending the existing software tools such as compilers, simulators and conformance test suites.
 
-The constituency represented by the Graphics SIG are implementers of programmable graphics solutions based on a RISC-V based unified shading core. By using an open ISA, these implementers leverage on a set of open source software tools maintained by the members of the RISC-V Foundation.
+The constituency represented by the Graphics SIG are implementers of programmable graphics solutions based on the RISC-V instruction set. By using an open ISA, these implementers leverage on a set of open source software tools maintained by the members of the RISC-V Foundation.
