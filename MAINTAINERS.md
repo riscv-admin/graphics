@@ -1,4 +1,5 @@
 # Graphics Maintainers
 
-Chair:  
-Vice-Chair:  
+Chair:  Abel Bernabeu
+
+Vice-Chair:  Atif Zafar
