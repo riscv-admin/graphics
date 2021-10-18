@@ -1,6 +1,6 @@
 # Graphics Charter
 
-The Graphics Special Interest Group (SIG) will develop the strategy, do gap analysis and prioritization of those gaps to enable RSC-V implementers of hardware and  software to enable modern graphics accelerators. The aforementioned strategy encompasses:
+The Graphics Special Interest Group (SIG) will develop the strategy, do gap analysis and prioritization of those gaps to enable RISC-V implementers of hardware and  software to enable modern graphics accelerators. The aforementioned strategy encompasses:
 
 - working with and contributing to existing Committees, SIGs, and TGs developing RISC-V extensions and software ecosystem components identified as strategic for efficient implementation of graphics-specific operations
 
