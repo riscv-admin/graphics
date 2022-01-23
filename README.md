@@ -25,6 +25,7 @@ The group welcomes collaboration, with the solely condition that you join the RI
 under the (really reasonable) terms and conditions in the [membership](https://riscv.org/membership/)
 section from the RISC-V Foundation website.
 
-Alternatively, you can email the group organizers for additional information:
+If you have any doubts you can email the group organizers for
+additional information:
 - Abel Bernabeu <<abel.bernabeu@esperantotech.com>>, Chair
 - Atif Zafar, Vice-chair
