@@ -2,7 +2,7 @@
 
 The Graphics and Machine Learning Special Interest Group (SIG) develops the strategy,
 does gap analysis and prioritizes tasks for enabling RISC-V implementers to support
-modern graphics and machine learning accelerators.
+and develop modern graphics and machine learning accelerators.
 
 The group is the result of having recently (December 2021) fused the Graphics and
 Machine Learing efforts for synergically developing our common agenda items.
