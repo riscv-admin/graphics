@@ -10,7 +10,7 @@ Machine Learing efforts for synergically developing our common agenda items.
 Our approved [charter](https://github.com/riscv-admin/graphics/blob/main/CHARTER.md)
 gives a more precise definition of our purpose within RISC-V.
 
-#  Minutes
+# Meeting minutes
 
 The minutes and other materials we use during our meetings are collected in this repo,
 under the [minutes](https://github.com/riscv-admin/graphics/tree/main/minutes) folder.
