@@ -1,4 +1,4 @@
-== Meeting on 28th October 2021
+= Meeting on 28th October 2021
 
 * Time: 19:00 (Barcelona time)
 * Attendees:
@@ -17,12 +17,12 @@ Mick Thomas Lim (Individual contributor)
 
 * Recorded: yes, on the chair’s computer
 
-=== Agenda
+== Agenda
 
 * Gap analysis index (DONE)
 * Volunteering for product market research (DONE)
 
-=== Summary
+== Summary
 
 We had a quick chat for discussing the structure the ``Gap analysis''
 document has.
@@ -41,7 +41,7 @@ initiative, possibly a candidate for replacing WebGL. We will follow up
 to see if there is any work required but at the moment I do not see much
 for the group to do in this area.
 
-==== Ongoing tasks
+=== Ongoing tasks
 
 The following people got work assigned:
 

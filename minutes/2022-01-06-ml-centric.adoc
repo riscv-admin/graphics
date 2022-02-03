@@ -1,4 +1,4 @@
-== RISC-V Graphics and ML SIG meeting on 6th January 2021
+= RISC-V Graphics and ML SIG meeting on 6th January 2021
 
 * Time: 19:00 (Barcelona time)
 * Attendees:
@@ -13,7 +13,7 @@
 ** Torbjørn Ness (Nordic Semiconductor)
 * Recorded: yes, on the chair’s computer
 
-=== Agenda
+== Agenda
 
 The session was focused on ML.
 
@@ -22,7 +22,7 @@ The session was focused on ML.
 * Status of the RISC-V backend on TVM (DONE)
 * Gap analysis for ML: a practical approach (DONE)
 
-=== ML frameworks: the case for TVM support
+== ML frameworks: the case for TVM support
 
 TVM was ranked as third in terms of interest by our members on the
 survey we did a few weeks ago. The voted options were:
@@ -65,7 +65,7 @@ polyhedral compiler is more of a promise than a reality as of today,
 though, because: - The technology is still experimental (IMHO). - A cost
 function is not always available.
 
-=== Gap analysis for ML: a practical approach
+== Gap analysis for ML: a practical approach
 
 On the previous ML meeting we started discussing what workload to use as
 a performance benchmark, with two options being considered:
@@ -93,7 +93,7 @@ Also different criteria may be needed to be taken into account:
 effort?
 * What do members willing to invest resources want to prioritize?
 
-=== Volunteering areas
+== Volunteering areas
 
 Here is the list of volunteering areas for anyone looking for
 contribution opportunities:

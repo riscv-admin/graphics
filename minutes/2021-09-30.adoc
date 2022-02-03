@@ -1,19 +1,19 @@
-== Meeting on 30nd September 2021
+= Meeting on 30nd September 2021
 
 * Time: 19:00 (Barcelona time)
 * Attendees: 7
 * Recorded: yes, on the chair’s computer
 
-=== Agenda
+== Agenda
 
 * Reminders (DONE)
 * Is Skia alive and interesting? (NOT STARTED)
 * Gap analysis tasks (ONGOING)
 * Challenges beyond the RISC-V scope (DONE)
 
-=== Summary
+== Summary
 
-==== Gap analysis
+=== Gap analysis
 
 The gap between RISC-V V and SPIR-V is summarized (slide 8).
 
@@ -38,7 +38,7 @@ not provide any numbers.
 Some of the work developing those tools can be shared with Khronos,
 hopefully.
 
-==== Tasks for attendees
+=== Tasks for attendees
 
 Mark Himelstein (RISC-V’s CTO): - Do introductions with Khronos for
 starting a discussion on how to share tooling efforts.

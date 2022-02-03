@@ -1,10 +1,10 @@
-== Meeting on 16nd September 2021
+= Meeting on 16nd September 2021
 
 * Time: 19:00 (Barcelona time)
 * Attendees: 7
 * Recorded: yes, on the chair’s computer
 
-=== Agenda
+== Agenda
 
 * Avoiding the ``unified'' concept (DONE)
 * New preliminary charter discussion (DONE)
@@ -13,16 +13,16 @@
 * Gap analysis tasks (ONGOING)
 * Is Skia alive and interesting? (NOT STARTED)
 
-=== Summary
+== Summary
 
-==== More introductions
+=== More introductions
 
 New faces: - Mick Thomas Lim: employed by Intel but attending as
 individual contributor. - Peter Lieber: employed by Broadcom but also
 attending as individual contributor. - Drew Fustini: Linux kernel
 developer.
 
-==== The word ``unified'' gets forbidden
+=== The word ``unified'' gets forbidden
 
 There is no need for our discussions to be centered on a specific kind
 of implementation like a unified shading architecture.
@@ -34,7 +34,7 @@ Iakovos mentions there is also a good reason for not centering the
 discussion on unified shading architectures. That reason is to allow
 innovation by not being too prescriptive.
 
-==== The charter tweaks
+=== The charter tweaks
 
 * There was an explicit mention of open source, when we are open to
 software with any license that makes sense for our members.
@@ -45,7 +45,7 @@ thing, but we can not represent the RISC-V International legal entity.
 
 Both issues were corrected and fixed in GitHub.
 
-==== Vision
+=== Vision
 
 We go through a revisited version of the ``vision'' slides from previous
 meeting without a mention of the ``unified'' word.
@@ -58,7 +58,7 @@ a microcontroller, supporting only vertex and fragment shaders.
 * Complete multicore: more than one core and addition of all the missing
 shading stages (tessellation, geometry shaders and so on).
 
-==== Tasks for attendees
+=== Tasks for attendees
 
 Abel (chair): - Setup voting for our charter a Google form. - Setup
 another form for collecting what are our areas of interest (for example

@@ -1,19 +1,19 @@
-== Meeting on 2nd September 2021
+= Meeting on 2nd September 2021
 
 * Time: 19:00 (Barcelona time)
 * Attendees: 7
 * Recorded: yes, on the chair’s computer
 
-=== Agenda
+== Agenda
 
 * Short introductions (DONE)
 * Charter discussion (ONGOING)
 * Vision briefing (ONGOING)
 * Gap analysis tasks (NOT STARTED)
 
-=== Summary
+== Summary
 
-==== The round of introductions shows a wide range of members
+=== The round of introductions shows a wide range of members
 
 * Atif Zafar, from Pixilica (a provider of development boards).
 * Iakovos Stamoulis, director of engineering at Applied Materials
@@ -27,7 +27,7 @@ Technologies (interested in heterogenous computing).
 * Abel Bernabeu, senior machine learning engineer from Esperanto
 Technologies (formerly a graphics company).
 
-==== The charter needs a few tweaks
+=== The charter needs a few tweaks
 
 * The concept of programmable shaders is too prescriptive, while members
 are generally interested in graphics, even beyond the current methods
@@ -37,7 +37,7 @@ involving RVI, but can involve other organizations.
 * The constituency is too narrow (as proved by the variety of
 attendees!).
 
-==== I briefed my vision, that triggered an interesting discussion on patents
+=== I briefed my vision, that triggered an interesting discussion on patents
 
 * Iakovos: As in other forums like Khronos, there should be some kind of
 patents discussion for making things clear from the begin.
@@ -50,7 +50,7 @@ that could be subject to patent. We can still produce useful specs
 without using specific adjectives or design constructs that are not
 essential for our purpose but can trigger patent claims.
 
-==== Tasks for attendees
+=== Tasks for attendees
 
 Abel (chair): - I agree on improving the charter as suggested and
 circulating a Google Docs link on the mailing list for attendees to

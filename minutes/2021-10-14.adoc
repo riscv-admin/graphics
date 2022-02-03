@@ -1,10 +1,10 @@
-== Meeting on 14th October 2021
+= Meeting on 14th October 2021
 
 * Time: 19:00 (Barcelona time)
 * Attendees: 9
 * Recorded: no
 
-=== Agenda
+== Agenda
 
 * Summary from previous session (DONE)
 * Charter approval vote (MOVED TO OFFLINE)
@@ -12,16 +12,16 @@
 * Compiler tech discussion (ONGOING)
 * Docker image discussion (DONE)
 
-=== Summary
+== Summary
 
-==== Charter
+=== Charter
 
 The charter does not seem to receive any more feedback within the group,
 which I interpret as green light. After the meeting questions were
 emailed to Philipp Tomsich regarding the approval process within the
 Software HC.
 
-==== Simulator
+=== Simulator
 
 During the meeting I propose to develop a simulator based on libmesa
 that could be the tool we need for verifying the specs and doing
@@ -45,7 +45,7 @@ number of cycles in that table would need to be defined using
 assumptions about the micro-architecture, but that could work for the
 purpose estimating the execution times.
 
-==== Compiler
+=== Compiler
 
 Peter reports about two alternatives for building the shader compiler:
 
@@ -60,7 +60,7 @@ The choice of combining the official tools from Khronos and LLVM is what
 the implementors of RISC-V graphics would demand, and that is the reason
 why we decide to focus on that alternative.
 
-==== Docker image
+=== Docker image
 
 No commitments were made about who would like to work on docker (kind of
 expected). My guess is that the docker image will be kind of a
@@ -76,7 +76,7 @@ a good thing.
 The question is still open, but we created awarness that the development
 environment needs to be dockerized, rather than just documented.
 
-==== Priorities
+=== Priorities
 
 Am concerned that we get distracted from writing a the gap analysis
 document by looking at software tools.

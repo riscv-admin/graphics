@@ -1,4 +1,4 @@
-== Graphics and Machine Learning Special Interest Group
+= Graphics and Machine Learning Special Interest Group
 
 The Graphics and Machine Learning Special Interest Group (SIG) develops
 the strategy, does gap analysis and prioritizes tasks for enabling
@@ -13,19 +13,19 @@ Our approved
 https://github.com/riscv-admin/graphics/blob/main/CHARTER.md[charter]
 gives a more precise definition of our purpose within RISC-V.
 
-== Meeting minutes
+= Meeting minutes
 
 The minutes and other materials we use during our meetings are collected
 in this repo, under the
 https://github.com/riscv-admin/graphics/tree/main/minutes[minutes]
 folder.
 
-== Other resources
+= Other resources
 
 Some of the initial work from this group is briefed on this
 https://www.youtube.com/watch?v=kM0lsWjqOaw[talk].
 
-== Collaboration
+= Collaboration
 
 We are a mixture of volunteers and member companies trying to bring
 RISC-V to new domains. The group welcomes collaboration, with the solely

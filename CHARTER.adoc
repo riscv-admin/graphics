@@ -1,4 +1,4 @@
-== Graphics Charter
+= Graphics Charter
 
 The Graphics Special Interest Group (SIG) will develop the strategy, do
 gap analysis and prioritization of those gaps to enable RISC-V

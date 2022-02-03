@@ -1,4 +1,4 @@
-== Graphics Maintainers
+= Graphics Maintainers
 
 Chair: Abel Bernabeu
 

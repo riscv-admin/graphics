@@ -1,4 +1,4 @@
-== RISC-V Graphics and ML SIG meeting on 20th January 2021
+= RISC-V Graphics and ML SIG meeting on 20th January 2021
 
 * Time: 19:00 (Barcelona time)
 * Attendees:
@@ -12,14 +12,14 @@
 ** Richard Van (Futurewei)
 * Recorded: yes, on the chair’s computer
 
-=== Agenda
+== Agenda
 
 The session was focused on Graphics.
 
 * Birds of a feather: Zvediv needed for graphics (DONE)
 * Birds of a feather: aligning priorities with employers (DONE)
 
-=== Logistics
+== Logistics
 
 Regarding the #sig-graphics channel within the
 https://risc-v-international.slack.com/join/shared_invite/zt-geth2rmq-JQdqM8L9ai3r4Sw6Pu8ILA#/shared-invite/email[RISC-V
@@ -41,7 +41,7 @@ https://github.com/riscv-admin/graphics[repo] a bit more useful by
 replacing the one-liner template we had with something else (which I did
 over the weekend!).
 
-=== Zvediv needed for graphics
+== Zvediv needed for graphics
 
 The https://github.com/riscv/riscv-v-spec/blob/master/ediv.adoc[Zvediv]
 (Divided Element) extension would have provided workgroups, needed for
@@ -73,7 +73,7 @@ the corresponding committees.
 
 I volunteer to start the conversation through email.
 
-=== Aligning priorities with employers
+== Aligning priorities with employers
 
 The discussion on the second part of the session was about how can our
 group better align with the interest of our employer companies. We feel
@@ -89,7 +89,7 @@ our mailing list, where the participation is bigger. As of today more
 than 100 members as opposed to the 10 members regularly attending our
 meetings.
 
-=== Comments on the gap analysis draft
+== Comments on the gap analysis draft
 
 Comments received on the current draft of the gap analysis:
 
@@ -98,7 +98,7 @@ expertise.
 * Oguz: make clear what things are going to be fixed function as opposed
 to software.
 
-=== Volunteering opportunities on graphics
+== Volunteering opportunities on graphics
 
 * Everyone who can read this, feel free to make comments on the
 https://docs.google.com/document/d/1vFo2vf1AnwXElmK-UuttYSU2Heo2VAuP/edit#heading=h.pbu2u3akt0l5[live
