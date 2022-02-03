@@ -1,0 +1,56 @@
+== Meeting on 23th December 2021
+
+* Time: 19:00 (Barcelona time)
+* Attendees:
+
+Abel Bernabeu (Esperanto Technologies, Chair)
+
+Mick Thomas Lim (Individual contributor)
+
+Christoph Müllner (SBA Research)
+
+Aritz Erkiaga
+
+Jeff Sheldon
+
+Mehmet Oguz Derin (Individual contributor)
+
+* Recorded: yes, on the chair’s computer
+
+=== Agenda
+
+* Introductions (DONE)
+* Machine Learning follow up (DONE)
+* ML survey results (DONE)
+* Gap analysis for ML: a practical approach (DONE)
+
+=== Introductions
+
+New faces, notably we got representation from the RISC-V toolchain group
+(Christoph Müllner).
+
+=== Machine learning follow up
+
+We go through the charter and identify at least one item that relates to
+ongoing activities within RISC-V: BFloat16 support.
+
+=== ML survey results
+
+The ML survey results are commented. The main take away message: -
+Inference in embedded devices (on the edge) seems to be our sweep spot
+of interest. - The preferred framework seems to be TensorFlow Lite,
+followed by PyTorch/Glow and TVM. No interest in TLX yet.
+
+Full results available
+https://github.com/riscv-admin/graphics/blob/main/minutes/presentation-2021-12-23-ml-centric.pdf[here].
+
+=== Gap analysis for ML: a practical approach
+
+I explain what a valid approach for the gap analysis could be: picking
+the practical task of improving the efficiency (instruction count) for a
+workload on RISC-V. A ResNet50 implementation is possibly a good
+starting point.
+
+Christoph Müllner suggests to try something more general like looking at
+industry standard benchmarks rather than cherry-picking models. I think
+we will follow up the discussion on next meeting.
