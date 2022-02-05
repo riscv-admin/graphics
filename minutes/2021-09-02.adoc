@@ -1,0 +1,60 @@
+= Meeting on 2nd September 2021
+
+* Time: 19:00 (Barcelona time)
+* Attendees: 7
+* Recorded: yes, on the chair’s computer
+
+== Agenda
+
+* Short introductions (DONE)
+* Charter discussion (ONGOING)
+* Vision briefing (ONGOING)
+* Gap analysis tasks (NOT STARTED)
+
+== Summary
+
+=== The round of introductions shows a wide range of members
+
+* Atif Zafar, from Pixilica (a provider of development boards).
+* Iakovos Stamoulis, director of engineering at Applied Materials
+(formerly known as Think Silicon, provider of graphics IP).
+* Jeff Scheel, technical program manager from RVI
+* Mark Himelstein, CTO from RVI
+* Simon Davidmann, CEO from Imperas (provider of simulation models
+widely used in design verification)
+* Richard Van, Chief CPU Architect and director of CPU Team at Futurewei
+Technologies (interested in heterogenous computing).
+* Abel Bernabeu, senior machine learning engineer from Esperanto
+Technologies (formerly a graphics company).
+
+=== The charter needs a few tweaks
+
+* The concept of programmable shaders is too prescriptive, while members
+are generally interested in graphics, even beyond the current methods
+for delivering them.
+* The scope of our interactions should not be described as only
+involving RVI, but can involve other organizations.
+* The constituency is too narrow (as proved by the variety of
+attendees!).
+
+=== I briefed my vision, that triggered an interesting discussion on patents
+
+* Iakovos: As in other forums like Khronos, there should be some kind of
+patents discussion for making things clear from the begin.
+* Mark: we do not discuss these matters on RISC-V venues.
+* Atif: patents should belong to the implementation, not the ISA.
+* Abel: I do not think we are infringing any yet.
+
+Mark’s overall advise is try to not tie the specs to specific methods
+that could be subject to patent. We can still produce useful specs
+without using specific adjectives or design constructs that are not
+essential for our purpose but can trigger patent claims.
+
+=== Tasks for attendees
+
+Abel (chair): - I agree on improving the charter as suggested and
+circulating a Google Docs link on the mailing list for attendees to
+actively drive more changes as needed. - Because some members have
+expressed they can not attend next week, after the meeting I decide to
+circulate a Google Form on the mailing list for finding out whether
+there is an optimal meeting time and frequency for the group.

@@ -1,0 +1,53 @@
+= Meeting on 28th October 2021
+
+* Time: 19:00 (Barcelona time)
+* Attendees:
+
+Abel Bernabeu (Esperanto Technologies, Chair)
+
+Atif Zafar (Pixilica, Vice-chair)
+
+Peter Lieber (Individual contributor)
+
+Francis Bruno (Individual contributor, GPLGPU)
+
+Mehmet Oguz Derin (Individual contributor)
+
+Mick Thomas Lim (Individual contributor)
+
+* Recorded: yes, on the chair’s computer
+
+== Agenda
+
+* Gap analysis index (DONE)
+* Volunteering for product market research (DONE)
+
+== Summary
+
+We had a quick chat for discussing the structure the ``Gap analysis''
+document has.
+
+Oguz (Mehmet Oguz Derin) suggested to consider the needs of WGSL (WebGPU
+Shading Language), and offered some resources for us to learn more about
+the project:
+
+* https://github.com/gpuweb/gpuweb
+* https://gpuweb.github.io/gpuweb/wgsl
+
+In principle, I think it is similar to WebGL in the sense that it builds
+an extra layer of software on top of vendor drivers that follow existing
+Khronos standards and accept SPIR-V. The project seems a good
+initiative, possibly a candidate for replacing WebGL. We will follow up
+to see if there is any work required but at the moment I do not see much
+for the group to do in this area.
+
+=== Ongoing tasks
+
+The following people got work assigned:
+
+* Atif Zafar: get figures for our market research, possibly through
+colleagues at Jon Peddie Research.
+* Peter Lieber: play with a SPIR-V to LLVM translation test, to get a
+grasp of the amount of work that is needed in making the Khronos
+translator work for GLSL.
+* Abel Bernabeu: Keep working on the gap analysis document.

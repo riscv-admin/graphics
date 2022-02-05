@@ -1,0 +1,81 @@
+= Meeting on 26th November 2021
+
+* Time: 19:00 (Barcelona time)
+* Attendees:
+
+Abel Bernabeu (Esperanto Technologies, Chair)
+
+Atif Zafar (Pixilica, Vice-chair)
+
+Peter Lieber (Individual contributor)
+
+Mehmet Oguz Derin (Individual contributor)
+
+Mick Thomas Lim (Individual contributor)
+
+* Recorded: yes, on the chair’s computer
+
+== Agenda
+
+* Follow up on ongoing tasks (DONE)
+* A preview of what we will present at the RISC-V Summit, under the
+``Beyond the RISC-V ISA'' track (DONE)
+* A technical discussion on mapping from vector elements to work-items
+(DONE)
+
+== Announcement
+
+I announce internally that the Graphics and the ML SIGs are merging. The
+decision is settled (the Software HC has enough capacity for deciding
+this and has done so). The logistics we will figure out, for example the
+ML mailing list may get redirected to sig-graphics if that is supported
+by groups.io. This change could be temporary until we split again when
+enough critical mass is reached.
+
+The change will affect our agendas, with the merged group prioritizing
+the tasks where there is ``sinergy'' between Graphics and ML.
+
+== Follow up ongoing tasks
+
+Atif confirms he is working on collecting the data he needs for doing a
+write up of the ``Motivation'' introductory section in the gap analysis
+document.
+
+== Slides for the RISC-V Summit
+
+As promised, we go through the slides I have prepared for the RISC-V
+Summit. The content of the presentation is closely related to the gap
+analysis document.
+
+Constructive feedback is given.
+
+Regarding atomics or memory ordering (barriers), Oguz asks how compliant
+RVV is with SPIR-V’s atomics. My answer is that since these details are
+not strictly needed for OpenGL ES 2.0 they are being overlooked for us
+to focus on other stuff.
+
+Regarding the transcendental functions required for graphics (sin, cos,
+exp2 and log2), Oguz asks what is the needed accuracy. I propose we
+stick to the accuracy achieved by the scalar implementation, which
+should be more than enough for graphics. After the meeting I double
+check this suggestion of mine and I see no scalar implementation on
+RISC-V (sorry for this).
+
+A good reference for the needed accuracy is the OpenCL spec
+(https://www.khronos.org/registry/OpenCL/specs/2.2/pdf/OpenCL_Env.pdf):
+
+* For sin and cos the error should be smaller or equal than 4 ULP.
+* For exp2 and log2 it should be smaller or equal than 3 ULP.
+
+Oguz suggests that maybe supporting work-item scopes also affects
+masking, used for simulating branching, in the sense that we no longer
+mask indiviual vector elements but work-items instead. That is correct.
+
+== Discussion on supporing work-item scopes
+
+Regarding the support for work-item scopes I propose people read the
+Zvediv extension that was dropped from RVV in the last minute:
+https://github.com/riscv/riscv-v-spec/blob/master/ediv.adoc
+
+Everyone gets yet additional homework: think about how would you add
+dimensionality to the vector operand within a work-item scope.

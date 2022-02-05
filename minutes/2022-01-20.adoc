@@ -1,0 +1,105 @@
+= RISC-V Graphics and ML SIG meeting on 20th January 2021
+
+* Time: 19:00 (Barcelona time)
+* Attendees:
+** Abel Bernabeu (Esperanto Technologies, Chair)
+** Christoph Müllner (SBA Research)
+** Jeff Scheel (RISC-V)
+** Peter Lieber (Individual contributor)
+** Mehmet Oguz Derin (Individual contributor)
+** Michael Wong (Codeplay, Chair from Datacenter SIG)
+** Mick Thomas Lim (Individual contributor)
+** Richard Van (Futurewei)
+* Recorded: yes, on the chair’s computer
+
+== Agenda
+
+The session was focused on Graphics.
+
+* Birds of a feather: Zvediv needed for graphics (DONE)
+* Birds of a feather: aligning priorities with employers (DONE)
+
+== Logistics
+
+Regarding the #sig-graphics channel within the
+https://risc-v-international.slack.com/join/shared_invite/zt-geth2rmq-JQdqM8L9ai3r4Sw6Pu8ILA#/shared-invite/email[RISC-V
+Slack workspace], Jeff reminds us that technical discussions should be
+searchable through the working groups portal, and therefore anything
+technically relevant is likely better placed on our mailing lists.
+
+I (Abel) agree, adding that we prefer growing the community by allowing
+members to engage on conversations through the mailing list, but I see a
+few use cases for Slack:
+
+* asking embarrassing technical questions that are not necessarily
+relevant for everyone
+* getting immediate answers for unblocking individuals trying to run
+scripts and that sort of things.
+
+Last, but not least, Jeff suggested to make our GitHub
+https://github.com/riscv-admin/graphics[repo] a bit more useful by
+replacing the one-liner template we had with something else (which I did
+over the weekend!).
+
+== Zvediv needed for graphics
+
+The https://github.com/riscv/riscv-v-spec/blob/master/ediv.adoc[Zvediv]
+(Divided Element) extension would have provided workgroups, needed for
+competitive performance on graphics. Note that when I use the term
+``workgroups'' I mean ``warp parallelism'' or ``wave paralellism'', with
+the three terms them being synonyms in my own interpretation.
+
+However, the extension was dropped in the last minute and not ratified
+as part of Zve. We had a discussion on why is useful for graphics, which
+would be the ideal use case. I suggest to try to resurrect the extension
+for graphics, which in principle should be easier than creating a new
+group from scratch in terms of process.
+
+There are few questions that are worth for the graphics group to try to
+answer:
+
+* What is the status
+* What are the reasons why it was dropped
+* Future plans
+
+Jeff Scheel suggests to contact Andrew Waterman for helping to answer
+those questions.
+
+Regarding the conversation with Andrew Waterman needing to be public (in
+the spirit of RISC-V being community-driven), Christoph points out that
+not every single communication instance has to be public as long as
+there are enough opportunities for other members to take part through
+the corresponding committees.
+
+I volunteer to start the conversation through email.
+
+== Aligning priorities with employers
+
+The discussion on the second part of the session was about how can our
+group better align with the interest of our employer companies. We feel
+this alignment is needed for employers willing to contribute more
+resources (in terms of working time).
+
+While the question is difficult to answer, we get at least two things
+clear:
+
+* An agreement that this question is key for RISC-V.
+* Jeff points out that the question is important enough for moving it to
+our mailing list, where the participation is bigger. As of today more
+than 100 members as opposed to the 10 members regularly attending our
+meetings.
+
+== Comments on the gap analysis draft
+
+Comments received on the current draft of the gap analysis:
+
+* Peter: keep assuming the document is read by people without graphics
+expertise.
+* Oguz: make clear what things are going to be fixed function as opposed
+to software.
+
+== Volunteering opportunities on graphics
+
+* Everyone who can read this, feel free to make comments on the
+https://docs.google.com/document/d/1vFo2vf1AnwXElmK-UuttYSU2Heo2VAuP/edit#heading=h.pbu2u3akt0l5[live
+document of gap analysis]
