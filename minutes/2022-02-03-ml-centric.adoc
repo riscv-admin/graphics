@@ -1,0 +1,82 @@
+= RISC-V Graphics and ML SIG meeting on 3rd February 2021
+
+* Time: 19:00 (Barcelona time)
+* Attendees (14 people, a record attendance):
+** Abel Bernabeu (Esperanto Technologies, Chair)
+** Atif Zafar (Pixilica, Vice-chair)
+** Xichuan Zhou (Chongqing University)
+** Vaibhav Verma (University of Virginia)
+** Alan Kao (Andes)
+** Christoph Müllner (SBA Research)
+** Dimitris Tsaliagkos (Individual contributor)
+** Ken Dockser (Rivos)
+** Mehmet Oguz Derin (Individual contributor)
+** Michael Wong (Codeplay, Chair from Datacenter SIG)
+** Nikos Stavropoulos (Think Silicon)
+** Peter Lieber (Individual contributor)
+** Steve (Google Research)
+** Victor Moya (Semidynamics)
+* Recorded: yes, on the chair’s computer
+
+== Agenda
+
+The session was focused on ML.
+
+* Welcoming new members (DONE)
+* Dashboard concept (DONE)
+* Matrix multiply concept (DONE)
+
+== Welcoming new members
+
+Plenty of new faces, so formal introductions done.
+
+I take the freedom of asking Vaibhav Verma to talk us about the research he
+has been doing as part of his PhD. He accepts the offer and he will use some
+time during one of the next sessions for this (a reminder to be sent beforehand).
+I think it is worth for everyone to look at the tools he has been using and
+some of his results.
+
+== Dashboard concept
+
+We review the things that we want to track on a dashboard for offering the
+Software HC visibility of the ML effort. During the review two things come up:
+
+- Ken (Rivos) volunteers to update the BFloat16 status, as he is taking part
+  in those discussions already.
+
+- Christoph Müllner mentions IREE, an MLIR-based framework, which seems
+  interesting and we add it to the items to be tracked.
+
+No one speaks up against keeping PyTorch/Glow tracking as optional (as an euphemism
+for low priority).
+
+After the meeting Guy Lemieux suggested on the Vector TG mailing list to also
+include Intel's AMX on the dashboard, which I think is a very relevant technology
+when it comes to ISA extensions for matrix multiply and will also be added.
+
+I promise to create an AsciiDoc template that will be hosted in our GitHub repo,
+and accept updates as merge requests.
+
+== Matrix multiply concept
+
+The motivation for pursuing a matrix multiply task group is exposed.
+We would pursue increasing the abstraction level beyond the dot product, in order to allow
+microarchitectures that aggressively trade area for performance acceleration
+factors in the range from 1 to n^3 (with n being the size of a square matrix).
+
+I express my wish of building on top of the existing Zve registers and
+concepts.
+
+I also point out that, in case the Zvediv extension or an equivalent effort is driven, the matrix
+multiply instructions will be affected.
+
+Ken asks what is the status of Zvediv, and after the meeting he enquiries on the
+Vector TG mailing list (thanks). The conclusions need to be collected on the next
+minutes.
+
+== Volunteering opportunities on ML
+
+* Review a draft for the call for the matrix multiply task group creation. The document is
+  still being edited but can do with early comments.
+
+https://docs.google.com/document/d/1KpFuvFAAggovCVPXKLPgePzi00Ek_8TMLZZ3152ZXlI/
