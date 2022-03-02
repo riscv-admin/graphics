@@ -1,7 +1,7 @@
 # ML on RISC-V dashboard template
 ------------------------
 
-WARNING: this file is just a template, and its content is inaccurate. If you have corrections make a merge request.
+WARNING: this file is just a template, and its contents are inaccurate. If you have corrections make a merge request.
 
 ## 1. Specific ISA instructions
 
