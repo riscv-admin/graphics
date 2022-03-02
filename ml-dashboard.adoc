@@ -1,14 +1,14 @@
 # ML on RISC-V dashboard template
 ------------------------
 
-WARNING: this file is just a template, and its content is innacurate. If you have corrections make a merge request.
+WARNING: this file is just a template, and its content is inaccurate. If you have corrections make a merge request.
 
 ## 1. Specific ISA instructions
 
 ### 1.1 Support for BFloat16
 
 |=======================
-| FP32 to BFloat16 convertion       | RISC-V | x86    | ARM  | RDNA2 | PTX
+| FP32 to BFloat16 conversion       | RISC-V | x86    | ARM  | RDNA2 | PTX
 | Rounding as in TVM (no rounding)  | Yes    | Yes    | Yes  | Yes   | Yes
 | Rounding as in Pytorch/Glow       | No     | No     | No   | No    | No
 | Rounding as in TensorFlow Lite    | No     | Yes    | No   | No    | No
