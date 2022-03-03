@@ -1,4 +1,4 @@
-= RISC-V Graphics and ML SIG meeting on 3rd February 2021
+= RISC-V Graphics and ML SIG meeting on 3rd February 2022
 
 * Time: 19:00 (Barcelona time)
 * Attendees (14 people, a record attendance):

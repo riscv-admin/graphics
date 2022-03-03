@@ -1,4 +1,4 @@
-= RISC-V Graphics and ML SIG meeting on 20th January 2021
+= RISC-V Graphics and ML SIG meeting on 20th January 2022
 
 * Time: 19:00 (Barcelona time)
 * Attendees:

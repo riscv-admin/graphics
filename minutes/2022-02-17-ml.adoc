@@ -1,7 +1,7 @@
-= RISC-V Graphics and ML SIG meeting on 17th February 2021
+= RISC-V Graphics and ML SIG meeting on 17th February 2022
 
 * Time: 19:00 (Barcelona time)
-* Attendees (14 people, a record attendance):
+* Attendees (7 members):
 ** Abel Bernabeu (Esperanto Technologies, Chair)
 ** Christoph Müllner (SBA Research)
 ** Ken Dockser (Rivos)
