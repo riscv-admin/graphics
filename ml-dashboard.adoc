@@ -54,7 +54,7 @@ WARNING: this file is just a template, and its contents are inaccurate. If you h
 | Components                        | RISC-V | x86    | ARM  | RDNA2 | PTX
 | TVM                               | No     | Yes    | No   | No    | Yes
 | TensorFlow / TensorFlow Lite      | No     | No     | No   | No    | No
-| IREE                              | No     | No     | No   | No    | No
+| IREE                              | Yes    | No     | No   | No    | No
 | Pytorch / Glow                    | No     | No     | No   | Yes   | Yes
 | BLAS                              | Yes    | Yes    | Yes  | Yes   | Yes
 |=======================
