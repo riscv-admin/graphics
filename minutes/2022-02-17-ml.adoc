@@ -1,82 +1,124 @@
-= RISC-V Graphics and ML SIG meeting on 3rd February 2021
+= RISC-V Graphics and ML SIG meeting on 17th February 2021
 
 * Time: 19:00 (Barcelona time)
 * Attendees (14 people, a record attendance):
 ** Abel Bernabeu (Esperanto Technologies, Chair)
-** Atif Zafar (Pixilica, Vice-chair)
-** Xichuan Zhou (Chongqing University)
-** Vaibhav Verma (University of Virginia)
-** Alan Kao (Andes)
 ** Christoph Müllner (SBA Research)
-** Dimitris Tsaliagkos (Individual contributor)
 ** Ken Dockser (Rivos)
-** Mehmet Oguz Derin (Individual contributor)
+** Mehmet Oguz Derin (individual contributor)
 ** Michael Wong (Codeplay, Chair from Datacenter SIG)
+** Torbjørn Ness (Nordic Semiconductor ASA)
 ** Nikos Stavropoulos (Think Silicon)
-** Peter Lieber (Individual contributor)
-** Steve (Google Research)
-** Victor Moya (Semidynamics)
+
 * Recorded: yes, on the chair’s computer
 
 == Agenda
 
-The session was focused on ML.
+The session was focused on graphics.
 
-* Welcoming new members (DONE)
-* Dashboard concept (DONE)
-* Matrix multiply concept (DONE)
+* Mesa library support (DONE)
+* Programming models vs. algorithms (DONE)
+* Benchmarking effort (DONE)
+* Quick update on matrix multiply TG creation (DONE)
 
-== Welcoming new members
+== Mesa library support
 
-Plenty of new faces, so formal introductions done.
+I summarized what I think is the best course of action for supporting a
+RISC-V based shading core on Mesa.
 
-I take the freedom of asking Vaibhav Verma to talk us about the research he
-has been doing as part of his PhD. He accepts the offer and he will use some
-time during one of the next sessions for this (a reminder to be sent beforehand).
-I think it is worth for everyone to look at the tools he has been using and
-some of his results.
+There is currently no easy way to produce LLVM IR from Mesa for feeding
+the pre-existing RISC-V LLVM backend. As a matter of fact the Mesa developers
+are not keen to support that kind of translation path, when they have made a
+massive investment on developing their own intermediate representation:
+NIR (New Intermediate Representation).
 
-== Dashboard concept
+When I asked about the possibility of using SPIR-V rather than NIR, the
+mesa developers did not think SPIR-V gave them any advantage either, quite
+the contrary, they felt NIR is giving them functionality that SPIR-V would not.
 
-We review the things that we want to track on a dashboard for offering the
-Software HC visibility of the ML effort. During the review two things come up:
+It is expected from mesa backends that they implement a NIR backend producing
+assembly for the target, and that is how we should proceed when starting up
+the RISC-V effort. This point of view was shared by mesa developers like
+Jason Ekstrand and Connor Abbott (the NIR creator):
 
-- Ken (Rivos) volunteers to update the BFloat16 status, as he is taking part
-  in those discussions already.
+https://lists.freedesktop.org/archives/mesa-dev/2022-January/225640.html
 
-- Christoph Müllner mentions IREE, an MLIR-based framework, which seems
-  interesting and we add it to the items to be tracked.
+Once it is clear that we aim at a community developed NIR backend for mesa,
+the answer to the question of what graphics API and version can we aim at
+is that we are only limited by two things:
 
-No one speaks up against keeping PyTorch/Glow tracking as optional (as an euphemism
-for low priority).
+- The supported texture formats, that we select to match the needs of
+  OpenGL ES 2.0 but would not be enough for Vulkan.
 
-After the meeting Guy Lemieux suggested on the Vector TG mailing list to also
-include Intel's AMX on the dashboard, which I think is a very relevant technology
-when it comes to ISA extensions for matrix multiply and will also be added.
+- The conformance test suite pass rates.
 
-I promise to create an AsciiDoc template that will be hosted in our GitHub repo,
-and accept updates as merge requests.
+When OpenGL ES 2.0 conformance is achieved we can create new specs including
+the needed missing formats (like compressed formats) that are required by Vulkan.
+Until then it does not make sense to invest effort in supporting texture
+compression.
 
-== Matrix multiply concept
+Either way the NIR backend will be useful for any APIs we want to support in
+the future, like Vulkan, just needing to incrementally build on top of the OpenGL
+ES 2.0 effort.
+  
+In addition to the NIR backend we need a software rasterizer that delegates
+the shader executions on Spike for building an mesa-based environment where
+one can run graphics applications and collect the data. This tool will aid us
+on the task of justifying the utility of our extensions for graphics. Note that
+this is not the same as using mesa's llvmpipe, and what we are building is
+closer to a graphics accelator simulator.
 
-The motivation for pursuing a matrix multiply task group is exposed.
-We would pursue increasing the abstraction level beyond the dot product, in order to allow
-microarchitectures that aggressively trade area for performance acceleration
-factors in the range from 1 to n^3 (with n being the size of a square matrix).
 
-I express my wish of building on top of the existing Zve registers and
-concepts.
+The simulator will produce a report containing the executed shaders ordered
+by number of retired instructions, and for each shader we are interested in:
+- Number of retired instructions.
+- A shader code disassembly
 
-I also point out that, in case the Zvediv extension or an equivalent effort is driven, the matrix
-multiply instructions will be affected.
+At the end of the report we will also produce a summary with the total number
+of retired instructions.
 
-Ken asks what is the status of Zvediv, and after the meeting he enquiries on the
-Vector TG mailing list (thanks). The conclusions need to be collected on the next
-minutes.
+Christoph Müllner asked whether we will need any kind of display code for
+presenting the images rendered by our simulator on a screen. Actually, we
+can just render on a memory buffer allocated with malloc or new, using
+an existing mesa build option for pure offscreen rendering. A console
+application potentially running on a docker image is enough for producing
+offscreen images and saving them to disk.
 
-== Volunteering opportunities on ML
+== Programming models vs. algorithms
 
-* Review a draft for the call for the matrix multiply task group creation. The document is
-  still being edited but can do with early comments.
+When someone asks for the SIG to explain the most important algorithms for
+graphics he is asking the wrong question.
+
+Graphics is about a well defined programming model: the graphics pipeline.
+
+Modern graphics algorithms alternate pipeline state changes and primitive rendering. For example:
+
+- Clear depth and color
+- Pipeline update: enable z-buffer test and write, disable color writing, set a dummy fragment shader
+- Draw something
+- Update the pipeline.
+- Draw something.
+
+Algorithms assume this programming model, which is what a graphics core delivers. Benchmarks using
+this programming model and not algorithms, are important. And the importance of benchmarks is
+ephemeral, like a seasonal fashion. One day Taichi was super important and a couple of years
+later we were caring about Manhatan.
+
+== Benchmarking effort
+
+Talking about benchmarks, we can focus on glmark2, which is open source for OpenGL ES 2.0 and we
+can hack easily if needed for using our mesa-based simulator.
+
+https://github.com/glmark2/glmark2
+
+== Quick update on the matrix multiply TG creation
+
+I asked people to review the draft for the call for the matrix multiply task group creation.
+Thanks to everyone who did like Ken Dockser.
 
 https://docs.google.com/document/d/1KpFuvFAAggovCVPXKLPgePzi00Ek_8TMLZZ3152ZXlI/
+
+Also asked people to write me a one-line email if they were interested in
+the matrix multiply TG creation. Thanks to those who did, as it is important
+to see what is the actual interest when evaluating whether it is worth putting
+RISC-V resources in this basket.
