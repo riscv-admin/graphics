@@ -1,0 +1,75 @@
+= RISC-V Graphics and ML SIG meeting on 3rd March 2022
+
+* Time: 19:00 (Barcelona time)
+* Attendees (14 members):
+** Abel Bernabeu (Esperanto Technologies, Chair)
+** Hasmet Akgun (N/A)
+** Ken Dockser (Rivos)
+** Mark Himelstein (RISC-V CTO)
+** A. Weder (N/A)
+** Christoph Müllner (SBA Research)
+** Jiang Zao (N/A)
+** Mehmet Oguz Derin (individual contributor)
+** Michael Wong (Codeplay, Chair from Datacenter SIG)
+** Mick Thomas Lim (individual contributor)
+** Vijay Ganesh (N/A)
+** Peter Wright (N/A)
+** Vaibhav Verma (University of Virginia)
+** Victor Moya (Semidynamics)
+
+* Recorded: yes, on the chair’s computer
+
+== Agenda
+
+The session was focused on ML.
+
+* Review the ML dashboard (DONE)
+* Update on matrix multiply TG creation (DONE)
+* Discussion of next steps: TVM setup (DONE)
+
+== Review the ML dashboard
+
+Reviewed the ML dashboard template.
+
+https://github.com/riscv-admin/graphics/blob/main/ml-dashboard.adoc
+
+After the meeting the first merge request was received (thanks Mehmet).
+
+The chair commits to produce a brief report summarizing the rounding mode variants
+when converting from fp32 to bfloat16 (on hindsigth, the document should
+also mention how to treat non-finite values). Ken Dockser will find these
+details useful.
+
+== Update on matrix multiply TG creation
+
+Mark Himelstein kindly makes the effort of joining the session
+for clarifying the status of this task group creation.
+
+The good news:
+
+- A Vector SIG group is going to be created for reviewing this and other
+  proposals that intersect with the work done by the Vector TG.
+  
+- Resources from the Vector TG will soon be available for pulling
+  into the new task groups that could hang from there.
+
+The not so good news:
+
+- The Graphics and ML SIG has not managed to convey dates or priorities.
+
+- Realistically, companies with commitments on delivering a solution this
+  year may have to go ahead and develop their own stuff, irrespective of
+  the standard.
+  
+My view is that I do not mind where the matrix multiply fits in the organization
+as long as it happens. If timelines are a concern it should be raised up sooner
+than later.
+  
+== Discussion of next steps: TVM setup (DONE)
+
+We need benchmarks for every single move, and the ML domain needs to catch up.
+
+Generating a vanilla RISC-V code for inferencing with Resnet18 with the TVM
+framework is a key task at the moment.
+
+Volunteers needed for 1 month timeboxed effort in setting this up.
