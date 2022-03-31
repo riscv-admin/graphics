@@ -1,0 +1,69 @@
+= RISC-V Graphics and ML SIG meeting on 17th March 2022
+
+* Time: 19:00 (Barcelona time)
+* Attendees (12 members):
+** Abel Bernabeu (Esperanto Technologies, Chair)
+** Vaibhav Verma (University of Virginia)
+** A. Weder (N/A)
+** Daniel Mueller-Gritschneder
+** Greg Favor (Ventana)
+** Guo Ren (Alibaba, T-HEAD)
+** Iakobos Stamoulis (AMAT)
+** Jeff Scheel (RISC-V)
+** Jon (Google)
+** Kamran (10xEngineer)
+** Mehmet Oguz Derin (individual contributor)
+** Mick Thomas Lim (individual contributor)
+
+* Recorded: no.
+
+== Agenda
+
+The session was focused on ML.
+
+* Presentation by Vaibhav Verma on the TVM tool chain (DONE)
+* An update on the TVM setup task (NOT DONE)
+* Open floor discussion (DONE)
+
+== Presentation by Vaibhav Verma on the TVM tool chain
+
+We took Vaibhav's time and effort putting together slices about the work with ASIP Compiler
+and the TVM software stack he has done for his PhD. He shows results of
+a working matrix multiply ISA extension and explains his methodoly.
+
+See his slides in: https://github.com/riscv-admin/graphics/blob/main/minutes/2022-03-17/AI-RISC_RISC-V_SIG_ML.pptx
+
+After the presentation he makes himself available for questions, some collected here:
+
+- Abel: In case of not aiming at doing compute in memory and only wanting to use a new instruction
+  for matrix multiply as an instrinsic, is it enough with just using Split and Tensorize
+  TVM schedulers?
+  
+  His view is that this would work. The extra leg of supporting compute in memory
+  is what actually made the TVM work extra hard (considering his background is not
+  software).
+  
+- Iakobos: is there a published spec of the ISA extension?
+
+  No, but it is doable. Within a couple of months will finish his PhD and likely 
+  have more availability to continue his work. 
+
+  Vaibah is looking at options for removing some of the dependencies with
+  ASIP Compiler. For example adding the new instructions on gcc and LLVM in
+  the traditional way, so an SDK can be published.
+  
+  Maybe working with students on more related work is possible. 
+
+Additional feedback from Iakobos: if the spec was publicly available likely we
+could help you with any needed compiler work (AMAT and the rest of the SIG).
+ 
+Abel: circulating a public spec would be extremely useful, irrespective of what
+finally becomes the standard for matrix multiply. I remark that ideally I
+would be keener to build a standard atop the vector extension (for example
+using operands in standard vector registers), but I encourage every
+collaboration between members. 
+
+== Open floor discussion (DONE)
+
+I asked for subjects other than matrix multiply to look at. I proposed myself to
+start with convolution and pooling.
