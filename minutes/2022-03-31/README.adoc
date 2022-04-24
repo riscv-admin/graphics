@@ -1,0 +1,65 @@
+= RISC-V Graphics and ML SIG meeting on 31th March 2022
+
+* Time: 16:00 (Barcelona time)
+* Attendees (15 members):
+** Abel Bernabeu (Esperanto Technologies, Chair)
+** Jeff Scheel (RISC-V)
+** Ken Dockser (Ventana)
+** Ryan Houdek (FEX-emu)
+** Michael Wong (Codeplay)
+** Chong Qing (N/A)
+** Chuang Feng (N/A)
+** Grzegorz Latosinski (AntMicro)
+** Iakobos Stamoulis (Think Silicon)
+** Kamran (10xEngineers)
+** Karol Gugala (N/A)
+** Mehmet Oguz Derin (individual contributor)
+** Mick Thomas Lim (individual contributor)
+** Mingxi Xiang (N/A)
+** Torbjorn Ness (Nordic Semiconductor ASA)
+
+* Recorded: no.
+
+== Agenda
+
+* Introduction to FEX-emu dynamic binary translation for x86
+* Requirement: 128 bits atomics (potentially unaligned when Zam is supported).
+* Requirement: cache-line boundary crossing atomics (not covered by Zam)
+* Requirement: 128 bits divides
+
+== Introduction to FEX-emu dynamic binary translation for x86
+
+This session was a bit atypical, as we discussed some requirements needed
+by FEX-emu, developed by Ryan Houdek and a team of developers and partially
+commissioned by Valve.
+
+Ryan sent a https://docs.google.com/document/d/1qcw6Bs3md6qH81pRzZn2rlWLBuMPLhsBw_-cG80lW1Y[document]
+with all the requirements he had collected when doing the emulation work
+for Arm64, which we used for cherry-picking some of the subjects for
+this session. Anyone reading this minutes is encoraged to read the whole
+document.
+
+== Requirement: 128 bits atomics (potentially unaligned when Zam is supported).
+
+Bigger atomics are needed, up to 128 bits and seems a genuine new requirement
+for RISC-V.
+
+== Requirement: cache-line boundary crossing atomics (not covered by Zam)
+
+To be confirmed with Krste (with Mark Himelstein on copy) whether the Zam
+extension support implies cache-line boundary crossing atomics. Requires
+clarification and potentially a small note on the spec, or not (we will not
+decide it in this SIG).
+
+== Requirement: 128 bits divides
+
+We discuss the possible workarounds for implementing divisions with a 128 bits
+dividend and a 64 bits divisor, needed for implementing "div" and "idiv" on
+x86-64.
+
+Ken Dockser suggests to try Newton-Rapson using some initial approximation.
+Possibly a subject to discuss with the Crypto TG.
+
+I am trying to use this requirement for organizing a contest for implementing
+this operation in software. If the instruction count for the winning proposal
+is unacceptable we can scale this operation as a new extension.
