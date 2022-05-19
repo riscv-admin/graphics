@@ -1,0 +1,69 @@
+= RISC-V Graphics and ML SIG meeting on 28th March 2022
+
+* Time: 16:00 (Barcelona time)
+* Attendees (16 members):
+
+** Abel Bernabeu (Esperanto Technologies, Chair)
+** Grzegorz Latosinski (AntMicro)
+** Ken Dockser (Rivos)
+** Xichuan Zhou (CQU China)
+** Guo Ren (Alibaba, T-Head)
+** Iakobos Stamoulis (Think Silicon)
+** Jon Tate (Google)
+** Mehmet Oguz Derin (individual contributor)
+** Michael Wong (Codeplay)
+** Mick Thomas Lim (individual contributor)
+** Mingxi Xiang (CQU China)
+** Philipp van Kempen
+** Qiujing (N/A)
+** Ryan Houdek (FEX-Emu)
+** Torbjorn Ness (Nordic Semiconductor)
+** Yufeng Duan (CQU China)
+
+* Recorded: yes, on the chair computer.
+
+== Agenda
+
+* Warning: our zoom link will change for the next session
+* ML: introduction of new members
+* ML: review of the Resnet18 benchmarking task (TVM)
+* ML: Call for Docker image proposals
+* ML: call for dashboard updates
+https://github.com/riscv-admin/graphics/blob/main/ml-das
+hboard.adoc
+* Graphics: asking Atif about SIGGRAPH events
+
+== Summary
+
+Mingxi Xiang volunteered to help with producing a Resnet18 benchmark with
+TVM. It was suggested (by the chair) to script the process in a way that
+is repeatable and hosted on a GitHub repo, were people can review and
+contribute as we go, rather than just releasing a package when is ready.
+
+By giving visibility of the activity we give opportunities for the
+community to engage and contribute, which is as important as getting
+performace figures.
+
+== Discussion on convolution
+
+I suggested to start looking a standarizing convolution engines. My assumption
+is that the way of traversing the input tensor is the same for convolution and
+for the pooling operations, which suggests addressing for problems with the same
+logic. Jon Tate brings up Winograd, which is an alternative to regular
+convolution implementations, and may break the assumption that pooling and
+convolution are sharing common logic.
+
+My guess is that we will require to write/find a Winograd implemenation for RISC-V
+V before considering what to do.
+
+
+== Resources provided on the chat
+
+An example of Winograd for a 1D convolution:
+https://medium.com/@dmangla3/understanding-winograd-fast-convolution-a75458744ff
+
+Two of our member companies (Google and AntMicro) are delivering a joint talk that
+is relevant for our group, here is the link to the conference program:
+https://open-src-sorc.org/2022-05/program-riscv-meeting.html#GIELDA
+
+Hopefully the session is recorded and we can share it soon.
