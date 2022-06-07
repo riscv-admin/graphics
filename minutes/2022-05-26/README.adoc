@@ -1,0 +1,84 @@
+
+= RISC-V Graphics and ML SIG meeting on 26th May 2022
+
+* Time: 16:00 (Barcelona time)
+* Attendees (16 members):
+
+** Abel Bernabeu (Esperanto Technologies, Chair)
+** Michael Wong (Codeplay)
+** Grzegorz Latosinski (AntMicro)
+** Jon Tate (Google)
+** Mehmet Oguz Derin (individual contributor)
+** Mingxi Xiang (CQU China)
+** Qinjian (N/A)
+** Qiujing (T-Head)
+** Ryan Houdek (FEX-Emu)
+** Torbjorn Ness (Nordic Semiconductor)
+** Xichuan Zhou (CQU China)
+** Yufeng Duan (CQU China)
+
+
+* Recorded: no.
+
+== Agenda
+
+* Our Zoom link has already changed
+* Discuss whether to focus our effort on Winograd or direct
+  convolution
+* Supporting for the F(6x6, 3x3) Winograd formulation
+* ML: call for dashboard updates
+
+
+== Summary
+
+I make a reminder that our Zoom link has already changed.
+
+The session starts with a quick survey on Winograd (what I could learn
+myself since the previous meeting, which is enough for implementing
+convolutions with this approach).
+
+We start with learning what a formulation like F(6x6, 3x3) is, and
+we see a collection of resources for building different formulations,
+like F(2x2, 3x3).
+
+Overall, Winograd seems like a good way of reducing computation,
+although at the expense of reducing accuracy, which is what limits the
+size of the input blocks.
+
+Even when using small enough blocks for accuracy to be acceptable,
+a disadvantage of Winograd compared to direct convolution is
+the lack of generality: the stride being 1 and the kernel size being
+fixed limits the number of convolutions that can be handled.
+
+We see that there is an operation that is specific of Winograd and would
+be a good candidate for being accelerated:
+
+$y := A^T x A$
+
+Where:
+$A$ is a small matrix,
+$x$ is an input block,
+$y$ is the output block.
+
+
+Given that some kind of acceleration for this kind of matrix product would help
+improve performance, the proposed course of action is to support different
+convolution methods, cascading from the least to the most general one:
+
+1) When stride is 1 and kernel 3x3 we can use Winograd with the F(6x6, 3x3)
+   formulation, accelerated with the identified operation.
+
+2) When the conditions for Winograd are not met we can use a direct
+   convolution engine, as a fallback.
+   
+3) When there is dilation or something else not handled by the direct convolution
+   engine, the software is  expected to fallback to vector code.
+
+Jon Tate suggests that F(2x2, 3x3) would already give quite a good boost
+(2.25 reduction in multiplies), while the resulting matrices not being as
+massive as for the F(6x6, 3x3) case (only 4x4 compared to 6x6). That is a fair
+point and we take good note of it.
+
+Mingxi Xiang volunteered to help with producing a Winograd implementation
+for the 3x3 convolutions seen on the Resnet18 benchmark, for aiding on the
+architecture exploratory work.
