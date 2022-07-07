@@ -1,0 +1,48 @@
+= RISC-V Graphics and ML SIG meeting on June 6th, 2022
+
+* Time: 16:00 (Barcelona time)
+* Attendees (15 members):
+** Abel Bernabeu (Esperanto Technologies, Chair)
+** Cindy L (Google)
+** Grzegorz Latosinski (AntMicro)
+** Mick Thomas Lim (individual contributor)
+** Mingxi Xiang (N/A)
+** Qiu Jing (T-Head)
+** Yufeng Duang (CQU)
+** Iakobos Stamoulis (Think Silicon)
+
+* Recorded: no.
+
+== Agenda
+
+* Math functions for graphics
+* Preparing SIGGRAPH event attendance
+* Preparing competition for fast 128 bits divides
+
+== Math functions for graphics
+
+We discuss the gaps in math functions that have been identified as needed for
+graphics taking SPIR-V, RDNA2 and PTX as references. Four categories are
+identified:
+
+- ceil/floor
+- sin/cos
+- exp2/log2
+- OpIsNormal
+
+Volunteers are asked for looking at those areas.
+
+Some updates expected for the meeting on July 7th 2022.
+
+== Preparing SIGGRAPH event attendance
+
+We call for volunteers to prepare a potential SIGGRAPH event. The content needs
+to be suitable for non-members.
+
+Some voluteering express interest in attending but no content suggestions made.
+
+As of today it looks like it may just be a face-to-face meetup.
+
+== Preparing competition for fast 128 bits divides
+
+No time to talk about this.
