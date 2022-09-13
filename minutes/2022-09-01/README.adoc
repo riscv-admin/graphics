@@ -1,0 +1,44 @@
+= RISC-V Graphics and ML SIG meeting on September 1st, 2022
+
+* Date: 1st September 2022
+* Time: 16:00 (Barcelona time)
+** Abel Bernabeu (Esperanto Technologies, Chair)
+** Chris Taylor (TCL)
+** Fabian Peddinghaus (TU Munich)
+** Grigory Okhotnikov (Syntacore)
+** Grzegorz Latosinski (Antmicro)
+** Karol Gugala (Antmicro)
+** Kevin Jerome (NXP)
+** Mingxi Xiang (CQU China)
+** Philipp van Kempen (TU Munich)
+** Qiujing (T-Head)
+** Torbjorn Ness (Nordic Semiconductor)
+** Yufeng Duan (CQU China)
+
+* Recorded: no.
+
+== Agenda for ML session
+
+* muRISCV-NN project overview
+* Open floor discussion about next steps
+
+== muRISCV-NN project overview
+
+We started the "work year" with guests on our ML session: Fabian Peddinghaus, Philipp van Kempen,Rafael Stahl and Daniel Müller-Gritschneder, students from TU Munich.
+
+They reported about their [muRISCV-NN project](https://github.com/tum-ei-eda/muriscv-nn), consisting on a RISC-V port or Arm's CMSIS-NN.
+
+Functionally-wise they have managed to pass the unit tests and actively worked on optimizing the different operators, with good speedups through RVV.
+They have tried the P extension, but they were more successful with RVV, because of different factors not necessarily speaking against the suitability of the extension for ML. The numbers can be seen on [their presentation](https://github.com/riscv-admin/graphics/blob/main/minutes/2022-09-01/muRISCV-NN-Presentation.pdf).
+
+In order to measure acceleration they are using instruction count as a proxy for performance (which seems reasonable). They are not yet using QEMU, with Spike being their simulator of preference.
+
+They find promising the availability of RVV implementations like Splatz or Vicuna, which are Zve32x compliant. On Zve32x the floating point operations are not present, but that is actually fine for inference with CMSIS-NN style frameworks that are targeted at the embedded domain. Their software project seems a good complement for Zve32x cores.
+
+In terms of the arithmetic capabilities needed for CMSIS-NN they mention that int8 and int16 is what they require.
+
+Important remark: keeping this RISC-V effort in sync and functionally equivalent to the Arm counterpart has a running cost in terms of human resources. Thus, they think it would be helpful to have more reviewers tracking and backporting changes from the original CMSIS-NN for Arm. Those reviewers would contribute to keep the RISC-V project relevant.
+
+== Open floor discussion about next steps
+
+The gap analysis is pending, that should be addressed. At the very least the [ML dashboard](https://github.com/riscv-admin/graphics/blob/main/ml-dashboard.adoc) could do with updates from the community, this is a reminder.
