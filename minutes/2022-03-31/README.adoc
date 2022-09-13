@@ -9,7 +9,7 @@
 ** Michael Wong (Codeplay)
 ** Chong Qing (N/A)
 ** Chuang Feng (N/A)
-** Grzegorz Latosinski (AntMicro)
+** Grzegorz Latosinski (Antmicro)
 ** Iakobos Stamoulis (Think Silicon)
 ** Kamran (10xEngineers)
 ** Karol Gugala (N/A)

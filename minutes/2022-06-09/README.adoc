@@ -4,7 +4,7 @@
 * Attendees (15 members):
 ** Abel Bernabeu (Esperanto Technologies, Chair)
 ** Cindy L (Google)
-** Grzegorz Latosinski (AntMicro)
+** Grzegorz Latosinski (Antmicro)
 ** Mick Thomas Lim (individual contributor)
 ** Mingxi Xiang (N/A)
 ** Qiu Jing (T-Head)

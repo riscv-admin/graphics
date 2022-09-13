@@ -6,7 +6,7 @@
 
 ** Abel Bernabeu (Esperanto Technologies, Chair)
 ** Michael Wong (Codeplay)
-** Grzegorz Latosinski (AntMicro)
+** Grzegorz Latosinski (Antmicro)
 ** Jon Tate (Google)
 ** Mehmet Oguz Derin (individual contributor)
 ** Mingxi Xiang (CQU China)

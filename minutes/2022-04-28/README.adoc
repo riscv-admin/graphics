@@ -4,7 +4,7 @@
 * Attendees (16 members):
 
 ** Abel Bernabeu (Esperanto Technologies, Chair)
-** Grzegorz Latosinski (AntMicro)
+** Grzegorz Latosinski (Antmicro)
 ** Ken Dockser (Rivos)
 ** Xichuan Zhou (CQU China)
 ** Guo Ren (Alibaba, T-Head)
@@ -62,7 +62,7 @@ V before considering what to do.
 An example of Winograd for a 1D convolution:
 https://medium.com/@dmangla3/understanding-winograd-fast-convolution-a75458744ff
 
-Two of our member companies (Google and AntMicro) are delivering a joint talk that
+Two of our member companies (Google and Antmicro) are delivering a joint talk that
 is relevant for our group, here is the link to the conference program:
 https://open-src-sorc.org/2022-05/program-riscv-meeting.html#GIELDA
 
