@@ -1,0 +1,43 @@
+= RISC-V Graphics meeting on September 15th, 2022
+
+* Date: 15st September 2022
+* Time: 16:00 (Barcelona time)
+** Abel Bernabeu (Esperanto Technologies, Chair)
+** Hyesoon Kim (Vortex Project Manager, invited presenter)
+
+* Recorded: no.
+
+== Agenda for ML session
+
+* Presentation from the Vortex GPU project
+
+== Vortex GPU project
+
+The Vortex GPU project approaches the task of building a GPU based on RISC-V
+by extending a set of scalar RISC-V cores with support for:
+
+- wavefront activation (wspawn)
+- thread mask control (tmc)
+- thread divergence control (split and join)
+- wavefront barriers (bar)
+- texture sampling (tex)
+- rop (framebuffer operations).
+
+The project architects propose a minimalistic ISA, that has been successfully
+implemented on FPGAs.
+
+At a high level of abstraction the cores are organized in clusters, with all
+the cores from the same cluster sharing the same L2 cache. The clusters are then
+the tiling block building up the processor and sharing the same L3 cache.
+
+
+IMO (chair) the spec for the minimalistic set of instructions they propose should be
+recognized as a vendor extension, and have some visibility and support within the
+community, even if a ratification of the concepts it defines as part of the RISC-V
+official extensions is certainly challenging. The path of action discussed during the
+meeting is:
+
+- for the Vortex project: write specs in a similar format than the official ones
+
+- for the chair: discuss within the RISC-V community how can we better include vendor
+  extensions, learning from other organizations like Khronos.
