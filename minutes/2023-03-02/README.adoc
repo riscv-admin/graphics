@@ -1,0 +1,67 @@
+= Minutes for RISC-V Graphics SIG session on 3rd March 2023
+
+* Date: 3rd March 2023
+* Time: 16:00 (CET)
+** Abel Bernabeu (Esperanto Technologies, Chair)
+** Atif Zafar (X-Silicon, Vicechair)
+** Michael Wong (Codeplay)
+** Grzegorz Latosinski (Antmicro)
+** Lukas Jünger (MachineWare)
+
+* Recorded: no.
+
+== Agenda for Graphics
+
+* Review of Mesa's llvmpipe support for RISC-V
+* Open floor discussion
+
+== Review of Mesa's llvmpipe support for RISC-V
+
+We did some review of the status of Mesa's llvmpipe for RISC-V. This task
+was identified as key for providing a baseline of performance figures
+before new specific ISA extension groups are requested to be created.
+
+As of today only the softpipe Gallium driver is available, and supporting
+llvmpipe instead should give graphics a 2x performance improvement. The
+main obstacle for this to happen, as of today, is that llvmpipe is based
+on LLVM's MC JIT, which is deprecated and does not support RISC-V.
+
+Supporting RISC-V on MC JIT is not going to happen, because LLVM's
+development work has moved to the new ORC JIT that supersedes MC JIT.
+It is up to the mesa developer to move to the new JIT engine.
+
+Therefore, for llvmpipe to be fully supported for RISC-V it is necessary
+to port Mesa's llvmpipe to ORC JIT. An existing pending patch has been
+identified within the Mesa gitlab, that potentially adds experimental
+support for ORC JIT, with the caveat that the patch needs some minimal
+rework to be accepted: adding a meson build option for the new ORC JIT
+code not to be used by default.
+
+https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/17801
+
+There are concerns within the mesa development community about the new
+ORC JIT code not supporting Mesa's shader code cache, which requires
+the JIT engine to serialize the generated programs as .elf binaries.
+If anyone is familiar with the serialization code within LLVM's ORC JIT
+and would like to help, please drop me a line. This seems like a gap
+in our software ecosystem.
+
+There is an estimation of how long can take for final users to see the
+extra performance that llvmpipe would add for RISC-V.
+That is about two years (see "Timeline" slide on the
+[presentation](2023-03-02.pdf)). Volunteering could shorten the timeline.
+
+As a follow up action to this investigation I have tried the
+aforementioned patch myself on a Yocto image that runs on a simulated
+environment (MachineWare's) finding out that:
+
+- the suggested patch did not even build, but with some changes it does
+
+- there are still some issues with the JIT target triplet being used, as
+  the patch has clearly not been tested on cross-compilation before
+  (building from an x86 host an LLVM package for a RISC-V target).
+  Need to do more rework on this.
+
+== Open floor discussion
+
+No further topics raised.
