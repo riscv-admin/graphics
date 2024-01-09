@@ -2,7 +2,7 @@
 
 The Graphics and Machine Learning Special Interest Group (SIG) develops
 the strategy, does gap analysis and prioritizes tasks for enabling
-RISC-V implementers to support and develop accelerators for graphics and
+RISC-V implementers to support and develop accelerators for Computer graphics and
 machine learning.
 
 The group is the result of having recently (December 2021) fused the
@@ -12,6 +12,10 @@ common agenda items.
 Our approved
 https://github.com/riscv-admin/graphics/blob/main/CHARTER.md[charter]
 gives a more precise definition of our purpose within RISC-V.
+
+= Meeting Presentations
+
+The Presentation in this SIG are held in Google Drive in this folder https://drive.google.com/drive/folders/1QirnwYmwh1izxg52gWaQ9fK8JAZhg7rU 
 
 = Meeting minutes
 
@@ -37,5 +41,6 @@ Foundation website.
 If you have any doubts you can email the group organizers for additional
 information:
 
-* Abel Bernabeu <abel.bernabeu@esperantotech.com>, Chair
-* Atif Zafar, Vice-chair
+* Iakovos Stamoulis <i.stamoulis@think-silicon.com>, Chair
+* Abel Bernabeu <abel.bernabeu@esperantotech.com>, vice-Chair
+
