@@ -1,0 +1,14 @@
+= RISC-V Graphics SIG meeting on 3rd August 2023
+
+* Time: 18:00 (CET time)
+* Attendees :
+** Iakovos Stamoulis (Think Silicon, Chair)
+** Abel Bernabeu (Esperanto Technologies, Vice-chair)
+
+== Agenda
+ * Invited Presentation by Martin Troiber (Technical University of Munich)
+   A Vulkan Graphics Driver for RISC-V CPUs 
+ 
+== Notes
+
+   Presentation and Q/A Session with Martin

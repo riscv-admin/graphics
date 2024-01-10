@@ -1,0 +1,17 @@
+= RISC-V Graphics SIG meeting on 31st August 2023
+
+* Time: 18:00 (CET time)
+* Attendees :
+** Iakovos Stamoulis (Think Silicon, Chair)
+** Abel Bernabeu (Esperanto Technologies, Vice-chair)
+
+
+== Agenda
+ * Introductions
+ * Application Spaces Status
+ * Toolchain
+ * ISA Status
+ * RISC-V Summit North America
+
+== Notes
+

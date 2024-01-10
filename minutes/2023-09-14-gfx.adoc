@@ -1,0 +1,13 @@
+= RISC-V Graphics SIG meeting on 14th September 2023
+
+* Time: 18:00 (CET time)
+* Attendees :
+** Abel Bernabeu (Esperanto Technologies, Vice-chair)
+
+
+== Agenda
+  * Introductions
+  * Abstract GPU Architecture
+
+== Notes
+
